@@ -27,8 +27,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'talker = mypkg.talker:main',
-        'listener = mypkg.listener:main',
+            'talker = mypkg.talker:main',
+            'listener = mypkg.listener:main',
         ],
     },
 )
