@@ -27,13 +27,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-<<<<<<< HEAD
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
-=======
-        'talker = mypkg.talker:main',
-        'listener = mypkg.listener:main',
->>>>>>> origin/main
         ],
     },
 )
