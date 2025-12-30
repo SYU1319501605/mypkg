@@ -10,4 +10,7 @@ jobs:
         run: |
           rsync -av ./ /root/ros2_ws/src/mypkg/
           cd /root/ros2_ws
-          bash -xv ./src/mypkg/test/test.bash /root
+          source /opt/ros/humble/setup.bash
+          colcon build --packages-select mypkg
+          source install/setup.bash
+          bash src/mypkg/test/test.bash
