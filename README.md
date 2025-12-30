@@ -38,6 +38,7 @@ cd ~/ros2_ws
 colcon build --packages-select mypkg
 source install/setup.bash
 
+```
 
 ## 実行・テスト環境
 
@@ -52,4 +53,4 @@ source install/setup.bash
 
 ## ライセンスおよび著作権表示 ##
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます。
-- @2025 Kaki Syu
+- @2025 Syu Kaki
