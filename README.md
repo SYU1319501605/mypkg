@@ -42,6 +42,15 @@ source install/setup.bash
 
 ## 実行・テスト環境
 
+実行方法
+```bash
+ros2 run mypkg system_metrics_node
+```
+別ターミナルで動作確認：
+```bash
+ros2 topic echo /system_metrics
+```
+
 ### ローカル環境
 - Ubuntu 22.04 LTS
 - Bash
