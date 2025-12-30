@@ -1,11 +1,25 @@
 #!/bin/bash
+# system_metrics_node basic test
 
-dir=~
-[ "$1" != "" ] && dir="$1"
+set -e
 
-cd $dir/ros2_ws
-colcon build
-source $dir/.bashrc
-timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
+source /opt/ros/humble/setup.bash
+source /root/ros2_ws/install/setup.bash
 
-cat /tmp/mypkg.log | grep 'Listen: 10'
+echo "Starting system_metrics_node..."
+ros2 run mypkg system_metrics_node &
+NODE_PID=$!
+
+sleep 2
+
+echo "Checking topic existence..."
+ros2 topic list | grep /system_metrics
+
+echo "Checking topic publish..."
+timeout 3 ros2 topic echo /system_metrics | head -n 1
+
+echo "Test passed."
+
+kill $NODE_PID
+wait $NODE_PID 2>/dev/null || true
+
