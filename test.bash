@@ -1,10 +1,14 @@
 #!/bin/bash
-# system_metrics node basic test
+# system_metrics_node basic test
 
 set -e
 
-echo "Starting system_metrics node..."
-ros2 run mypkg system_metrics &
+# ROS 2 環境を読み込み
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+
+echo "Starting system_metrics_node..."
+ros2 run mypkg system_metrics_node &
 NODE_PID=$!
 
 # ノード起動待ち
