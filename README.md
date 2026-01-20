@@ -50,29 +50,26 @@ ROS 2 のトピックとして定期的に publish します。
 ## ビルド方法
 
 ```bash
-cd ~/ros2_ws
-colcon build --packages-select mypkg
-source install/setup.bash
+$ cd ~/ros2_ws
+$ colcon build --packages-select mypkg
+$ source install/setup.bash
 
 ```
 
-## 実行・テスト環境
+## 実行
 
 実行方法
 ```bash
-ros2 run mypkg system_metrics_node
+$ ros2 run mypkg system_metrics_node
 ```
 別ターミナルで動作確認：
 ```bash
-ros2 topic echo /system_metrics
+$ ros2 topic echo /system_metrics
 ```
 
 ### ローカル環境
 - Ubuntu 22.04 LTS
-- Bash
-
-### リモート環境（GitHub Actions）
-- Ubuntu latest
+- ROS2
 
 ---
 
