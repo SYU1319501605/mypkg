@@ -26,7 +26,7 @@ ROS 2 のトピックとして定期的に publish します。
 - **publish トピック**：`/system_metrics`
 - **メッセージ型**：`std_msgs/msg/String`
 
-###送信されるメッセージ例：
+送信されるメッセージ例：
 
 `CPU: 23.4 %, Memory: 45.1 %, Disk: 62.0 %`
 
